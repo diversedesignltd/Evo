@@ -1,6 +1,6 @@
 import React from "react";
 import { ImageBackground, View, Text, TouchableOpacity } from "react-native";
-import { styles } from "../style/stylesheet";
+import { styles } from "../../style/stylesheet";
 import IconItem from "./IconItem";
 import Attending from "./Attending";
 
@@ -11,16 +11,18 @@ export default class ItemCard extends React.Component {
       const type = props.category;
       if (type === "chaplaincy") {
         this.state = {
-          require: require("../assets/images/chaplaincy_card.png")
+          require: require("../../assets/images/chaplaincy_card.png")
         };
       } else if (type === "university") {
         this.state = {
-          require: require("../assets/images/university_card.png")
+          require: require("../../assets/images/university_card.png")
         };
       } else if (type === "union") {
-        this.state = { require: require("../assets/images/union_card.png") };
+        this.state = { require: require("../../assets/images/union_card.png") };
       } else {
-        this.state = { require: require("../assets/images/student_card.png") };
+        this.state = {
+          require: require("../../assets/images/student_card.png")
+        };
       }
     }
   }

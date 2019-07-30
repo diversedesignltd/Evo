@@ -1,9 +1,19 @@
 import { StyleSheet } from "react-native";
 
+export const colors = {
+  Student_union_color: "#42BCC1",
+  Students_color: "#705077",
+  Chaplaincy_color: "#2B2B2B",
+  University_color: "#1393F2"
+};
+
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#6F6F6F"
+  },
+  CategoryPicker: {
+    margin: 10
   },
   Linkscontainer: {
     flex: 1,

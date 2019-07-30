@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import ItemCard from "../components/ItemCard";
+import ItemCard from "../components/EventCard";
 import { styles } from "../style/stylesheet";
 
 export default class MenuBlock extends React.Component {
