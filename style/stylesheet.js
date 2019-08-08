@@ -9,8 +9,7 @@ export const colors = {
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#6F6F6F"
+    flex: 1
   },
   CategoryPicker: {
     margin: 10
