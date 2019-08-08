@@ -25,8 +25,6 @@ export default class CategoryPicker extends React.Component {
         <View style={styles.Hspace} />
         <ScrollView style={styles.CategoryPicker} horizontal={true}>
           <CategoryPickerItem
-            isOn={this.state.StudentUnionValue}
-            handleToggle={() => this.toggleStudentUnionValue()}
             text={"Student Union"}
             color={colors.Student_union_color}
           />
