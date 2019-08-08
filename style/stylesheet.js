@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
   Hspace: {
     height: 5
   },
-  FoodItemContainer: {
+  ItemContainer: {
     flex: 1,
     flexDirection: "column",
     margin: 10,
@@ -48,14 +48,6 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     flexDirection: "row",
     justifyContent: "flex-end"
-  },
-  FoodItemPrice: {
-    textAlign: "right",
-    fontSize: 18,
-    marginLeft: 15,
-    marginBottom: 5,
-    color: "white",
-    fontWeight: "bold"
   },
   ItemAttending: {
     position: "absolute",

@@ -29,10 +29,7 @@ export default class ItemCard extends React.Component {
 
   render() {
     return (
-      <ImageBackground
-        style={styles.FoodItemContainer}
-        source={this.state.require}
-      >
+      <ImageBackground style={styles.ItemContainer} source={this.state.require}>
         <TouchableOpacity
           style={{ height: 250 }}
           onPress={() =>
