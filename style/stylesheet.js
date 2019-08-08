@@ -51,7 +51,8 @@ export const styles = StyleSheet.create({
   },
   ItemAttending: {
     position: "absolute",
-    bottom: 0
+    bottom: 0,
+    left: -10
   },
   col: {
     flexDirection: "column"
