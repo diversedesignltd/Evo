@@ -29,12 +29,15 @@ export default class ItemCard extends React.Component {
 
   render() {
     return (
-      <ImageBackground style={styles.ItemContainer} source={this.state.require}>
-        <TouchableOpacity
-          style={{ height: 250 }}
-          onPress={() =>
-            this.props.navigation.navigate("Item", { item: this.props })
-          }
+      <TouchableOpacity
+        style={{ height: 250 }}
+        onPress={() =>
+          this.props.navigation.navigate("Item", { item: this.props })
+        }
+      >
+        <ImageBackground
+          style={styles.ItemContainer}
+          source={this.state.require}
         >
           <Text style={styles.ItemTitle}> {this.props.name}</Text>
           <Text style={styles.ItemLocation}>
@@ -48,8 +51,8 @@ export default class ItemCard extends React.Component {
           <View style={styles.ItemAttending}>
             <Attending color="#F0EA8C" number={122} />
           </View>
-        </TouchableOpacity>
-      </ImageBackground>
+        </ImageBackground>
+      </TouchableOpacity>
     );
   }
 }

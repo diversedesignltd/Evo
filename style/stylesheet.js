@@ -50,7 +50,7 @@ export const styles = StyleSheet.create({
   },
   ItemAttending: {
     position: "absolute",
-    bottom: 10,
+    bottom: 0,
     left: -10
   },
   col: {
