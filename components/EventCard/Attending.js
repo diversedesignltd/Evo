@@ -6,10 +6,10 @@ export default class Attending extends React.Component {
   render() {
     return (
       <View
-        style={{ flexDirection: "column", marginLeft: 20, marginBottom: 20 }}
+        style={{ flexDirection: "column", marginLeft: 20, marginBottom: 30 }}
       >
         <Icon
-          size={70}
+          size={60}
           iconStyle={{ marginRight: 30 }}
           color={this.props.color}
           name="ios-people"

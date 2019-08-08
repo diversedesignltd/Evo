@@ -26,8 +26,8 @@ export const styles = StyleSheet.create({
   ItemContainer: {
     flex: 1,
     flexDirection: "column",
-    margin: 10,
-    height: 250
+    margin: 5,
+    height: 230
   },
   ItemTitle: {
     marginTop: 20,
@@ -51,7 +51,7 @@ export const styles = StyleSheet.create({
   },
   ItemAttending: {
     position: "absolute",
-    bottom: 0,
+    bottom: 10,
     left: -10
   },
   col: {
