@@ -7,10 +7,7 @@ export default class CategoryPicker extends React.Component {
   constructor() {
     super();
     this.state = {
-      StudentUnionValue: true,
-      StudentsValue: true,
-      ChaplaincyValue: true,
-      UniversityValue: true
+      selected: []
     };
   }
 
@@ -23,7 +20,11 @@ export default class CategoryPicker extends React.Component {
       <View>
         <View style={styles.Hspace} />
         <View style={styles.Hspace} />
-        <ScrollView style={styles.CategoryPicker} horizontal={true}>
+        <ScrollView
+          style={styles.CategoryPicker}
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+        >
           <CategoryPickerItem
             text={"Student Union"}
             color={colors.Student_union_color}

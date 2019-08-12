@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#fff"
   },
   Hspace: {
-    height: 5
+    height: 15
   },
   ItemContainer: {
     flex: 1,
