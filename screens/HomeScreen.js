@@ -7,6 +7,19 @@ import { styles } from "../style/stylesheet";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default class HomeScreen extends React.Component {
+  constructor(props) {
+    super(props);
+    this.addToState = this.updateState.bind(this);
+    this.state = {
+      selected: []
+    };
+  }
+
+  updateState = selected => {
+    console.log(selected);
+    this.setState({ selected: selected });
+  };
+
   render() {
     return (
       <LinearGradient
@@ -16,7 +29,7 @@ export default class HomeScreen extends React.Component {
         }}
       >
         <ScrollView>
-          <CategoryPicker />
+          <CategoryPicker updateState={this.updateState} />
           <MenuBlock {...props} navigation={this.props.navigation} />
         </ScrollView>
       </LinearGradient>

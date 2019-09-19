@@ -11,15 +11,19 @@ export default class CategoryPickerItem extends React.Component {
       background: props.color,
       color: white
     };
-    this.changeColor = this.changeColor.bind(this);
   }
 
-  changeColor() {
+  changeColor = () => {
+    if (this.state.background == this.props.color) {
+      this.props.removeFromState(this.props.index);
+    } else {
+      this.props.addToState(this.props.index);
+    }
     const background =
       this.state.background == this.props.color ? white : this.props.color;
     const color = this.state.color == white ? black : white;
     this.setState({ background, color });
-  }
+  };
 
   render() {
     return (
