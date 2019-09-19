@@ -31,9 +31,13 @@ export default class ItemCard extends React.Component {
     return (
       <TouchableOpacity
         style={{ height: 250 }}
-        onPress={() =>
-          this.props.navigation.navigate("Item", { item: this.props })
-        }
+        onPress={() => {
+          this.props.navigation.navigate("Item", {
+            item: this.props,
+            transition: "collapseTransition"
+          });
+          this.props.scroll(this.props.id);
+        }}
       >
         <ImageBackground
           style={styles.ItemContainer}

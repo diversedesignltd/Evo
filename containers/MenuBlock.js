@@ -8,11 +8,13 @@ export default class MenuBlock extends React.Component {
     return this.props.EventCards.edges
       .filter(edge => this.props.categories.includes(parseInt(edge.node.id)))
       .map(edge => edge.node)
-      .map(Card => {
+      .map((Card, index) => {
         return (
           <ItemCard
             {...Card}
+            id={index}
             key={Card.id}
+            scroll={this.props.scroll}
             category={Card.category}
             navigation={this.props.navigation}
           />

@@ -23,9 +23,18 @@ export default class HomeScreen extends React.Component {
     }));
   };
 
+  scroll = selected => {
+    console.log("selected");
+    this.scrollview.scrollTo({ y: 200 * selected });
+  };
+
   render() {
     return (
-      <ScrollView>
+      <ScrollView
+        ref={scrollview => {
+          this.scrollview = scrollview;
+        }}
+      >
         <Text styles={styles.h1}>Sort the category of events </Text>
         <CategoryPicker
           addToState={this.addToState}
@@ -33,6 +42,7 @@ export default class HomeScreen extends React.Component {
         />
         <MenuBlock
           {...props}
+          scroll={this.scroll}
           categories={this.state.selected}
           navigation={this.props.navigation}
         />
