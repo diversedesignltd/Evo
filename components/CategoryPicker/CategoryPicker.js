@@ -27,7 +27,7 @@ export default class CategoryPicker extends React.Component {
             removeFromState={this.props.removeFromState}
             text="Student Union"
             index={0}
-            color={colors.Student_union_color}
+            color={colors.union}
           />
           <CategoryPickerItem
             scroll={this.scroll}
@@ -35,7 +35,7 @@ export default class CategoryPicker extends React.Component {
             addToState={this.props.addToState}
             removeFromState={this.props.removeFromState}
             index={1}
-            color={colors.Students_color}
+            color={colors.student}
           />
           <CategoryPickerItem
             scroll={this.scroll}
@@ -43,7 +43,7 @@ export default class CategoryPicker extends React.Component {
             removeFromState={this.props.removeFromState}
             text="Chaplaincy"
             index={2}
-            color={colors.Chaplaincy_color}
+            color={colors.chaplaincy}
           />
           <CategoryPickerItem
             scroll={this.scroll}
@@ -51,7 +51,7 @@ export default class CategoryPicker extends React.Component {
             removeFromState={this.props.removeFromState}
             text="University"
             index={3}
-            color={colors.University_color}
+            color={colors.university}
           />
         </ScrollView>
       </View>

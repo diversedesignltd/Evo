@@ -34,6 +34,7 @@ export default class ItemCard extends React.Component {
         onPress={() => {
           this.props.navigation.navigate("Item", {
             item: this.props,
+            bg: this.props.category,
             transition: "collapseTransition"
           });
           this.props.scroll(this.props.id);
