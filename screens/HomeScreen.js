@@ -1,38 +1,42 @@
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, Text } from "react-native";
 import MenuBlock from "../containers/MenuBlock";
 import CategoryPicker from "../components/CategoryPicker";
 import { props } from "../dummy/dummy";
 import { styles } from "../style/stylesheet";
-import { LinearGradient } from "expo-linear-gradient";
 
 export default class HomeScreen extends React.Component {
-  constructor(props) {
-    super(props);
-    this.addToState = this.updateState.bind(this);
+  constructor(prop) {
+    super(prop);
     this.state = {
-      selected: []
+      selected: [0, 1, 2, 3]
     };
   }
 
-  updateState = selected => {
-    console.log(selected);
-    this.setState({ selected: selected });
+  addToState = selected => {
+    this.setState(state => ({ selected: [...state.selected, selected] }));
+  };
+
+  removeFromState = selected => {
+    this.setState(state => ({
+      selected: state.selected.filter(i => i !== selected)
+    }));
   };
 
   render() {
     return (
-      <LinearGradient
-        colors={["#413F3F", "#419BB9"]}
-        style={{
-          flex: 1
-        }}
-      >
-        <ScrollView>
-          <CategoryPicker updateState={this.updateState} />
-          <MenuBlock {...props} navigation={this.props.navigation} />
-        </ScrollView>
-      </LinearGradient>
+      <ScrollView>
+        <Text styles={styles.h1}>Sort the category of events </Text>
+        <CategoryPicker
+          addToState={this.addToState}
+          removeFromState={this.removeFromState}
+        />
+        <MenuBlock
+          {...props}
+          categories={this.state.selected}
+          navigation={this.props.navigation}
+        />
+      </ScrollView>
     );
   }
 }

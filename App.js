@@ -1,15 +1,7 @@
 import { AppLoading } from "expo";
 import { Asset } from "expo-asset";
-import * as Font from "expo-font";
 import React, { useState } from "react";
-import {
-  Platform,
-  SafeAreaView,
-  StatusBar,
-  StyleSheet,
-  View
-} from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { StyleSheet, View } from "react-native";
 
 import AppNavigator from "./navigation/AppNavigator";
 

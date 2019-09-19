@@ -8,6 +8,9 @@ export const colors = {
 };
 
 export const styles = StyleSheet.create({
+  h1: {
+    fontSize: 30
+  },
   container: {
     flex: 1
   },

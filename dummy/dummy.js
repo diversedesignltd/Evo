@@ -8,7 +8,7 @@ export const props = {
           name: "Invade The student Union",
           location: "Zero's, Student Union",
           price: "20",
-          id: "ad3",
+          id: "1",
           category: "student"
         }
       },
@@ -18,7 +18,7 @@ export const props = {
           name: "Invade The student Union",
           location: "Zero's, Student Union",
           price: "20",
-          id: "ad5",
+          id: "0",
           category: "union"
         }
       },
@@ -28,7 +28,7 @@ export const props = {
           name: "Invade The student Union",
           location: "Zero's, Student Union",
           price: "20",
-          id: "a21d",
+          id: "2",
           category: "chaplaincy"
         }
       },
@@ -38,27 +38,7 @@ export const props = {
           name: "Invade The student Union",
           location: "Zero's, Student Union",
           price: "20",
-          id: "ad32",
-          category: "university"
-        }
-      },
-      {
-        node: {
-          image: "https://cdn.stocksnap.io/img-thumbs/960w/KENRYYSJRK.jpg",
-          name: "Invade The student Union",
-          location: "Zero's, Student Union",
-          price: "20",
-          id: "adds",
-          category: "university"
-        }
-      },
-      {
-        node: {
-          image: "https://cdn.stocksnap.io/img-thumbs/960w/KENRYYSJRK.jpg",
-          name: "Invade The student Union",
-          location: "Zero's, Student Union",
-          price: "20",
-          id: "asad",
+          id: "3",
           category: "university"
         }
       }

@@ -4,21 +4,8 @@ import CategoryPickerItem from "./CategoryPickerItem";
 import { styles, colors } from "../../style/stylesheet";
 
 export default class CategoryPicker extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selected: [0, 1, 2, 3]
-    };
-  }
-
-  addToState = selected => {
-    this.setState({ selected: [...this.state.selected, selected] });
-  };
-
-  removeFromState = selected => {
-    this.setState({
-      selected: this.state.selected.filter(i => i !== selected)
-    });
+  scroll = selected => {
+    this.scrollview.scrollTo({ x: 120 * selected });
   };
 
   render() {
@@ -27,35 +14,42 @@ export default class CategoryPicker extends React.Component {
         <View style={styles.Hspace} />
         <View style={styles.Hspace} />
         <ScrollView
+          ref={scrollview => {
+            this.scrollview = scrollview;
+          }}
           style={styles.CategoryPicker}
-          horizontal={true}
+          horizontal
           showsHorizontalScrollIndicator={false}
         >
           <CategoryPickerItem
-            addToState={this.addToState}
-            removeFromState={this.removeFromState}
-            text={"Student Union"}
+            scroll={this.scroll}
+            addToState={this.props.addToState}
+            removeFromState={this.props.removeFromState}
+            text="Student Union"
             index={0}
             color={colors.Student_union_color}
           />
           <CategoryPickerItem
-            text={"Students"}
-            addToState={this.addToState}
-            removeFromState={this.removeFromState}
+            scroll={this.scroll}
+            text="Students"
+            addToState={this.props.addToState}
+            removeFromState={this.props.removeFromState}
             index={1}
             color={colors.Students_color}
           />
           <CategoryPickerItem
-            addToState={this.addToState}
-            removeFromState={this.removeFromState}
-            text={"Chaplaincy"}
+            scroll={this.scroll}
+            addToState={this.props.addToState}
+            removeFromState={this.props.removeFromState}
+            text="Chaplaincy"
             index={2}
             color={colors.Chaplaincy_color}
           />
           <CategoryPickerItem
-            addToState={this.addToState}
-            removeFromState={this.removeFromState}
-            text={"University"}
+            scroll={this.scroll}
+            addToState={this.props.addToState}
+            removeFromState={this.props.removeFromState}
+            text="University"
             index={3}
             color={colors.University_color}
           />
