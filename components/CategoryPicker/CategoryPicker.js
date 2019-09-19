@@ -11,8 +11,6 @@ export default class CategoryPicker extends React.Component {
   render() {
     return (
       <View>
-        <View style={styles.Hspace} />
-        <View style={styles.Hspace} />
         <ScrollView
           ref={scrollview => {
             this.scrollview = scrollview;

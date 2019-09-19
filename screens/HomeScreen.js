@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, Text } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import MenuBlock from "../containers/MenuBlock";
 import CategoryPicker from "../components/CategoryPicker";
 import { props } from "../dummy/dummy";
@@ -35,7 +35,9 @@ export default class HomeScreen extends React.Component {
           this.scrollview = scrollview;
         }}
       >
-        <Text styles={styles.h1}>Sort the category of events </Text>
+        <View style={styles.Hspace} />
+        <View style={styles.Hspace} />
+        <Text style={styles.h1}>Sort per category :</Text>
         <CategoryPicker
           addToState={this.addToState}
           removeFromState={this.removeFromState}

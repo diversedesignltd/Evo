@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 export default class EventScreen extends React.Component {
   render() {
-    return <Text>Hello World</Text>;
+    return <Text style={{ fontSize: 30, margin: 5 }}>Hello World</Text>;
   }
 }
