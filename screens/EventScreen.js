@@ -4,6 +4,7 @@ import { width } from "../constants/Layout";
 import Slider from "react-native-slide-to-unlock";
 import { ImageBackground, ScrollView, View, Text, Image } from "react-native";
 import IconItem from "../components/EventCard/IconItem";
+import ParallaxScrollView from "react-native-parallax-scroll-view";
 
 export default class EventScreen extends React.Component {
   state = {
@@ -16,8 +17,14 @@ export default class EventScreen extends React.Component {
 
   render() {
     return (
-      <ScrollView style={{ flex: 1, backgroundColor: "#1393F2" }}>
-        <Image source={require("../assets/images/image-slide.png")}></Image>
+      <ParallaxScrollView
+        style={{ flex: 1, backgroundColor: "#1393F2" }}
+        contentBackgroundColor="#41A8F5"
+        parallaxHeaderHeight={300}
+        renderBackground={() => (
+          <Image source={require("../assets/images/image-slide.png")}></Image>
+        )}
+      >
         <ImageBackground
           source={require("../assets/images/lollo22.png")}
           style={{
@@ -103,7 +110,7 @@ export default class EventScreen extends React.Component {
             </Text>
           </View>
         </View>
-      </ScrollView>
+      </ParallaxScrollView>
     );
   }
 }
