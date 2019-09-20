@@ -19,15 +19,14 @@ export default class EventScreen extends React.Component {
           }}
         >
           <Slider
-            childrenContainer={{ backgroundColor: "red" }}
             onEndReached={() => {
               alert("Attention", "onEndReached!");
             }}
             containerStyle={{
-              transform: [{ rotateZ: "-5deg" }],
+              transform: [{ rotateZ: "-6deg" }],
               margin: 8,
+              width: width,
               borderRadius: 10,
-              overflow: "hidden",
               alignItems: "center",
               justifyContent: "center"
             }}
@@ -37,20 +36,30 @@ export default class EventScreen extends React.Component {
                   width: 50,
                   marginLeft: 20,
                   borderRadius: 5,
+                  marginTop: 30,
                   height: 50
                 }}
                 source={require("../assets/images/button.png")}
               />
             }
           >
-            <Text>{"SLIDE TO UNLOCK"}</Text>
+            <Text
+              style={{
+                marginTop: 30,
+                marginLeft: 30,
+                fontSize: 24,
+                color: "white"
+              }}
+            >
+              {"SLIDE TO JOIN"}
+            </Text>
           </Slider>
         </ImageBackground>
         <View
           style={{
             flex: 1,
             justifyContent: "center",
-            marginTop: -100,
+            marginTop: -90,
             height: 60,
             backgroundColor: "#41A8F5"
           }}
