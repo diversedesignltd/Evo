@@ -1,16 +1,51 @@
 import React from "react";
 import { styles } from "../style/stylesheet";
-import { ScrollView, View, Text, Image } from "react-native";
+import { width } from "../constants/Layout";
+import Slider from "react-native-slide-to-unlock";
+import { ImageBackground, ScrollView, View, Text, Image } from "react-native";
 import IconItem from "../components/EventCard/IconItem";
 export default class EventScreen extends React.Component {
   render() {
     return (
       <ScrollView style={{ flex: 1, backgroundColor: "#1393F2" }}>
         <Image source={require("../assets/images/image-slide.png")}></Image>
-        <Image
+        <ImageBackground
           source={require("../assets/images/lollo22.png")}
-          style={{ marginTop: -120, marginLeft: -20 }}
-        ></Image>
+          style={{
+            width: width + 40,
+            height: 200,
+            marginTop: -120,
+            marginLeft: -30
+          }}
+        >
+          <Slider
+            childrenContainer={{ backgroundColor: "red" }}
+            onEndReached={() => {
+              alert("Attention", "onEndReached!");
+            }}
+            containerStyle={{
+              transform: [{ rotateZ: "-5deg" }],
+              margin: 8,
+              borderRadius: 10,
+              overflow: "hidden",
+              alignItems: "center",
+              justifyContent: "center"
+            }}
+            sliderElement={
+              <Image
+                style={{
+                  width: 50,
+                  marginLeft: 20,
+                  borderRadius: 5,
+                  height: 50
+                }}
+                source={require("../assets/images/button.png")}
+              />
+            }
+          >
+            <Text>{"SLIDE TO UNLOCK"}</Text>
+          </Slider>
+        </ImageBackground>
         <View
           style={{
             flex: 1,
