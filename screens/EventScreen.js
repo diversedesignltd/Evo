@@ -18,7 +18,7 @@ export default class EventScreen extends React.Component {
   render() {
     return (
       <ParallaxScrollView
-        style={{ flex: 1, backgroundColor: "#1393F2" }}
+        style={styles.parallaxScrollView}
         contentBackgroundColor="#41A8F5"
         parallaxHeaderHeight={300}
         renderBackground={() => (
@@ -27,48 +27,21 @@ export default class EventScreen extends React.Component {
       >
         <ImageBackground
           source={require("../assets/images/lollo22.png")}
-          style={{
-            width: width + 40,
-            height: 200,
-            marginTop: -120,
-            marginLeft: -30
-          }}
+          style={styles.slideImage}
         >
           <Slider
             onEndReached={() => {
               alert("Attention", "onEndReached!");
             }}
-            containerStyle={{
-              transform: [{ rotateZ: "-6deg" }],
-              margin: 8,
-              width: width,
-              borderRadius: 10,
-              alignItems: "center",
-              justifyContent: "center"
-            }}
+            containerStyle={styles.sliderContainer}
             sliderElement={
               <Image
-                style={{
-                  width: 50,
-                  marginLeft: 20,
-                  borderRadius: 5,
-                  marginTop: 30,
-                  height: 50
-                }}
+                style={styles.slideButton}
                 source={require("../assets/images/button.png")}
               />
             }
           >
-            <Text
-              style={{
-                marginTop: 30,
-                marginLeft: 30,
-                fontSize: 24,
-                color: "white"
-              }}
-            >
-              {"SLIDE TO JOIN"}
-            </Text>
+            <Text style={styles.slideText}>{"SLIDE TO JOIN"}</Text>
           </Slider>
         </ImageBackground>
         <View
@@ -80,16 +53,7 @@ export default class EventScreen extends React.Component {
             backgroundColor: "#41A8F5"
           }}
         >
-          <Text
-            style={{
-              textAlign: "left",
-              fontSize: 25,
-              margin: 10,
-              color: "#F0EA8C"
-            }}
-          >
-            {this.state.Card.name}
-          </Text>
+          <Text style={styles.ItemTitleCard}>{this.state.Card.name}</Text>
         </View>
         <View style={styles.cardShapeL}>
           <View style={styles.ItemInfoCard}>

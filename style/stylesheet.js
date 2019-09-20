@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { width } from "../constants/Layout";
 
 export const colors = {
   Student_union_color: "#42BCC1",
@@ -8,6 +9,37 @@ export const colors = {
 };
 
 export const styles = StyleSheet.create({
+  parallaxScrollView: {
+    flex: 1,
+    backgroundColor: "#1393F2"
+  },
+  slideText: {
+    marginTop: 30,
+    marginLeft: 30,
+    fontSize: 24,
+    color: "white"
+  },
+  slideButton: {
+    width: 50,
+    marginLeft: 20,
+    borderRadius: 5,
+    marginTop: 30,
+    height: 50
+  },
+  slideImage: {
+    width: width + 40,
+    height: 200,
+    marginTop: -120,
+    marginLeft: -30
+  },
+  sliderContainer: {
+    transform: [{ rotateZ: "-6deg" }],
+    margin: 8,
+    width: width,
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center"
+  },
   cardShapeL: {
     height: 300,
     borderBottomRightRadius: 25,
@@ -39,9 +71,6 @@ export const styles = StyleSheet.create({
     paddingTop: 15,
     backgroundColor: "#fff"
   },
-  Hspace: {
-    height: 15
-  },
   ItemContainer: {
     flex: 1,
     flexDirection: "column",
@@ -68,6 +97,12 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "flex-end"
   },
+  ItemTitleCard: {
+    textAlign: "left",
+    fontSize: 25,
+    margin: 10,
+    color: "#F0EA8C"
+  },
   ItemLocationCard: {
     textAlign: "left",
     fontSize: 20,
@@ -87,5 +122,8 @@ export const styles = StyleSheet.create({
   },
   col: {
     flexDirection: "column"
+  },
+  Hspace: {
+    height: 15
   }
 });
