@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#1393F2"
   },
+  container: {},
   slideText: {
     marginTop: 30,
     marginLeft: 30,
