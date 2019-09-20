@@ -4,7 +4,16 @@ import { width } from "../constants/Layout";
 import Slider from "react-native-slide-to-unlock";
 import { ImageBackground, ScrollView, View, Text, Image } from "react-native";
 import IconItem from "../components/EventCard/IconItem";
+
 export default class EventScreen extends React.Component {
+  state = {
+    Card: {}
+  };
+
+  componentDidMount() {
+    this.setState({ Card: this.props.navigation.getParam("item") });
+  }
+
   render() {
     return (
       <ScrollView style={{ flex: 1, backgroundColor: "#1393F2" }}>
@@ -72,7 +81,7 @@ export default class EventScreen extends React.Component {
               color: "#F0EA8C"
             }}
           >
-            Invade The Union
+            {this.state.Card.name}
           </Text>
         </View>
         <View style={styles.cardShapeL}>
@@ -84,7 +93,7 @@ export default class EventScreen extends React.Component {
           <View style={styles.Hspace} />
           <Text style={styles.ItemLocationCard}>
             <Text style={{ fontSize: 20 }}>@ </Text>
-            <Text>Zero's, Student Union</Text>
+            <Text>{this.state.Card.location}</Text>
           </Text>
           <View style={styles.cardShapeS}>
             <Text style={styles.description}>

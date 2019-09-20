@@ -8,7 +8,7 @@ export default class ItemCard extends React.Component {
   constructor(props) {
     super();
     if (props) {
-      const type = props.category;
+      const type = props.Card.category;
       if (type === "chaplaincy") {
         this.state = {
           require: require("../../assets/images/chaplaincy_card.png")
@@ -33,7 +33,7 @@ export default class ItemCard extends React.Component {
         style={{ height: 250 }}
         onPress={() => {
           this.props.navigation.navigate("Item", {
-            item: this.props,
+            item: this.props.Card,
             transition: "collapseTransition"
           });
           this.props.scroll(this.props.id);
@@ -43,10 +43,10 @@ export default class ItemCard extends React.Component {
           style={styles.ItemContainer}
           source={this.state.require}
         >
-          <Text style={styles.ItemTitle}> {this.props.name}</Text>
+          <Text style={styles.ItemTitle}> {this.props.Card.name}</Text>
           <Text style={styles.ItemLocation}>
             <Text style={{ fontSize: 20 }}>@ </Text>
-            <Text>{this.props.location}</Text>
+            <Text>{this.props.Card.location}</Text>
           </Text>
           <View style={styles.ItemInfo}>
             <IconItem name="ios-calendar" color="#F0EA8C" text="24/10" />

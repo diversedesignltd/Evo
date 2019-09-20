@@ -11,11 +11,10 @@ export default class MenuBlock extends React.Component {
       .map((Card, index) => {
         return (
           <ItemCard
-            {...Card}
             id={index}
             key={Card.id}
             scroll={this.props.scroll}
-            category={Card.category}
+            Card={Card}
             navigation={this.props.navigation}
           />
         );
