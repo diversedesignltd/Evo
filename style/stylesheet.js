@@ -8,6 +8,22 @@ export const colors = {
 };
 
 export const styles = StyleSheet.create({
+  cardShapeL: {
+    height: 300,
+    borderBottomRightRadius: 25,
+    backgroundColor: "#5A88AA"
+  },
+  cardShapeS: {
+    height: 200,
+    margin: 10,
+    borderBottomRightRadius: 25,
+    backgroundColor: "#41A8F5"
+  },
+  description: {
+    margin: 10,
+    color: "white",
+    fontSize: 18
+  },
   h1: {
     fontSize: 25,
     margin: 10
@@ -51,6 +67,18 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     flexDirection: "row",
     justifyContent: "flex-end"
+  },
+  ItemLocationCard: {
+    textAlign: "left",
+    fontSize: 20,
+    marginLeft: 10,
+    color: "white"
+  },
+  ItemInfoCard: {
+    marginTop: 10,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginLeft: 10
   },
   ItemAttending: {
     position: "absolute",
