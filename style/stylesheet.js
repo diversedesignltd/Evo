@@ -8,12 +8,35 @@ export const colors = {
   University_color: "#1393F2"
 };
 
+export const userImage = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center"
+  },
+  border: {
+    width: 320,
+    height: 300,
+    marginRight: 25,
+    alignItems: "center"
+  },
+  image: {
+    top: 145,
+    left: 19,
+    width: 130,
+    height: 130,
+    borderRadius: 65
+  },
+  userName: {
+    color: "white",
+    fontSize: 30
+  }
+});
+
 export const styles = StyleSheet.create({
   parallaxScrollView: {
     flex: 1,
     backgroundColor: "#1393F2"
   },
-  container: {},
   slideText: {
     marginTop: 30,
     marginLeft: 30,
